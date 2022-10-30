@@ -1,0 +1,32 @@
+package coding.ninja;
+
+import java.util.Scanner;
+
+public class Test {	
+	
+	
+	public static void main(String[] args) {
+				
+		
+		// Linear/ Sequential Search Algorithm for String type of Array.
+		
+		String [] arr = {"Avinash", "Chandan","Weds", "Khushboo", "Singh"};
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the element, which you want to search in the given set of Array");
+		String item = s.next();
+		int temp = 0;
+		
+		for(int i =0;i<arr.length;i++) {
+			
+			if(arr[i].equals(item)) {
+				System.out.println("Item is found at the"+"\t"+i+"th Index");
+				
+				temp = temp+1;
+			}
+		} if(temp==0) {
+			System.out.println("Item is not found in the given set of array");
+		}
+		
+	}
+
+}
