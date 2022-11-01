@@ -1,0 +1,36 @@
+package coding.ninja;
+
+import java.util.Scanner;
+
+public class Test {	
+	
+	public static void main(String[] args) {				
+		
+		// Merging 2 sorted Array
+		
+		int[] arr1 = {10,20,30};
+		int[] arr2 = {40,50,60,70,80,90,100};
+		
+		int arr1_len = arr1.length;
+		int arr2_len = arr2.length;
+		int arr3_len = arr1_len+arr2_len;
+		
+		int[] arr3 = new int[arr3_len];
+		
+		for(int i =0;i<arr1_len;i++) {
+			
+			arr3[i]= arr1[i];
+		}
+		for(int i=0;i<arr2_len;i++) {
+			
+			arr3[arr1_len+i]= arr2[i];
+		}
+		
+		for(int khu=0;khu<arr3_len;khu++) {
+			
+			System.out.print(arr3[khu]+" ");
+		}
+		
+	}
+
+}
