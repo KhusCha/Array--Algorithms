@@ -1,0 +1,36 @@
+package coding.ninja;
+
+import java.util.Scanner;
+
+public class Test {			
+	
+	public static void main(String[] args) {
+		
+		// Binary search is faster than linear search
+		// Condition:- The array must be sorted
+		
+		Scanner s = new Scanner(System.in);
+		
+		int arr[]= {2,5,7,9,12,14,16,17,19,20,24,28};
+		int lowerIndex=0, higherIndex=arr.length-1,middleIndex=(lowerIndex+higherIndex)/2, item=28;		
+		
+		
+		while(lowerIndex<=higherIndex) {
+		
+		if(arr[middleIndex]== item) {
+			System.out.println("Item is at"+" "+middleIndex+"th Index position");
+			
+			break;
+		}else if(arr[middleIndex]<item) {
+			
+			lowerIndex = middleIndex+1;
+		}else {
+			higherIndex = middleIndex-1;
+		}
+		  middleIndex = (lowerIndex+higherIndex)/2;
+		}	       
+	     
+	       
+ }  
+		
+}	
